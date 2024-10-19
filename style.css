@@ -1,14 +1,35 @@
 /* styles.css */
+:root {
+    /* Primary Palette */
+    --color-cabernet: #620B14;
+    --color-sunshine: #F7B119;
+    --color-rooster-red: #DD3828;
+    --color-mid-green: #195029;
+    --color-pale-pink: #F3C3B6;
+
+    /* Secondary Palette */
+    --color-insulation-pink: #FBEFEA;
+    --color-tile-green: #EAEFDB;
+
+    /* Background color */
+    --color-background: #F5F5F0; /* Approximation of the image background */
+
+    /* Text color */
+    --color-text: #333333;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-cabernet);
+    color: white;
     padding: 1rem;
 }
 
@@ -27,7 +48,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--color-pale-pink);
     text-decoration: none;
 }
 
@@ -37,16 +58,28 @@ main {
 
 section {
     margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-iframe {
-    border: none;
-    max-width: 100%;
+h2 {
+    color: var(--color-rooster-red);
+}
+
+#gpt {
+    background-color: var(--color-insulation-pink);
+}
+
+#media {
+    background-color: var(--color-tile-green);
 }
 
 audio, video {
     display: block;
     margin-bottom: 10px;
+    max-width: 100%;
 }
 
 form {
@@ -57,12 +90,27 @@ form {
 
 input, button {
     margin-bottom: 10px;
-    padding: 5px;
+    padding: 10px;
+    border: 1px solid var(--color-mid-green);
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--color-sunshine);
+    color: var(--color-cabernet);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--color-rooster-red);
+    color: white;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-cabernet);
+    color: white;
     text-align: center;
     padding: 1rem;
     position: fixed;
